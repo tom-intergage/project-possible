@@ -1,14 +1,88 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<div class="content-wrapper">
-		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-			<section class="article-content">
-				<h1 class="article-h1">{{post.title}}</h1>
-				<div class="article-body">
-					{{post.content}}
-				</div>
-			</section>
-		</article>
-	</div><!-- /content-wrapper -->
+
+<!--BANNER AREA-->
+
+<div class="pp-orange-tab pp-bg-image">
+
+</div>
+
+<section class="pp-banner pp-banner pp-bg-mountain position-relative">
+
+<div class="pp-bg-mountain__image" style="background-image:url({{ post.meta('banner_background_image').url }})">
+</div>
+
+<article class="pp-banner__logo w-100 position-absolute pp-one-third-xy">
+<div class="container">
+<div class="d-flex justify-content-around w-100">
+<header class="col-10 col-md-8 col-lg-5 pp-header-logo pp-bg-image d-block"></header>
+
+</article>
+ 
+</section>
+
+<section class="pp-black-bg">
+
+<div class="container py-5 lead">
+
+<div class="d-flex justify-content-around w-100 my-5">
+
+<div class="col-10 col-md-8 d-block pp-monospace">
+{{ post.meta('banner_content')}}
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!--SPLIT SECTION-->
+
+<section class="pp-half-height pp-grey-bg d-flex w-100 p-5 align-items-center">
+
+<article class="pp-split__article w-100 w-md-50 pp-bg-image pp-full-height" style="background-image:url({{ post.meta('split_section_image').url }})">
+
+</article>
+
+<article class="pp-split__article w-100 w-md-50 px-5 pp-monospace lead">
+{{ post.meta('split_section_content')}}
+</article>
+
+</section>
+
+<section class="pp-full-height pp-bg-image position-relative" style="background-image:url({{ post.meta('possible_background_image').url }})">
+
+<article class="w-100 position-absolute pp-possible-xy">
+<div class="container">
+<div class="d-flex justify-content-around w-100 ">
+<header class="col-10 col-md-8 pp-possible pp-bg-image d-block"></header>
+</div>
+<div class="d-flex justify-content-around w-100">
+<p class="col-10 col-md-8 d-block pp-orange-text text-uppercase text-center py-4 lead">14 Peaks // 7 Months</p>
+</div>
+</div>
+</article>
+
+</section>
+
+
+<section class="pp-carousel d-none">
+
+<div class="d-flex pp-carousel__stage">
+
+{% for i in 0..14 %}
+    <article class="pp-carousel__item position-relative">
+        <div class="pp-carousel__item-content position-absolute pp-center-xy">
+{{ post.title }}
+        </div>
+    </article>
+{% endfor %}
+
+</div>
+
+</section>
+
+
 {% endblock %}

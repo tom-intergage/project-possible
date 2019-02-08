@@ -37,15 +37,25 @@ Timber::$autoescape = false;
  * You can move this to its own file and include here via php's include("MySite.php")
  */
 class StarterSite extends Timber\Site {
-	/** Add timber support. */
+	/** Add timber support. */ 
 	public function __construct() {
 		add_action( 'after_setup_theme', array( $this, 'theme_supports' ) );
 		add_filter( 'timber_context', array( $this, 'add_to_context' ) );
 		add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
+		add_action('wp_enqueue_scripts', array($this, 'bootstrap'));
 		parent::__construct();
 	}
+
+	function bootstrap() {
+		
+		wp_enqueue_style('bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css");
+		wp_enqueue_script( 'bootstrap-js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js', array('jquery'), '3.3.4', true );
+		wp_enqueue_style('roboto', "https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,500,700");
+	}
+	
+
 	/** This is where you can register custom post types. */
 	public function register_post_types() {
 
