@@ -1,0 +1,11 @@
+<section class="{{ layout.style }} {{ layout.colour }} py-5">
+    <div class="container">
+        <div class="row">
+            {% for column in layout.columns %}
+                <article class="mb-5 mb-md-0 col-12 col-md {{ layout.style }}__article{% if layout.style == 'pp-achievements' and loop.index > 1 %} pp-monospace{% endif %}">
+                        {{ column.content }}
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>

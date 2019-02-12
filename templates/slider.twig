@@ -1,0 +1,16 @@
+<section class="pp-carousel pp-black-bg pb-5 pp-monospace">
+
+    {% if layout.title %}<h2 class="text-center pb-5 d-none">{{ layout.title }}</h2>{% endif %}
+
+    <div class="container">
+        <div class="pp-carousel__stage">
+        {% for slide in layout.panels %}
+            <article class="pp-carousel__item">
+                <div class="pp-carousel__item__content text-center">
+                    {{ slide.content }}
+                </div>
+            </article>
+        {% endfor %}
+        </div>
+    </div>
+</section> 

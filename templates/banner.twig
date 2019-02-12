@@ -1,0 +1,24 @@
+<section class="pp-banner pp-banner position-relative {{ layout.css_class }}">
+    <div class="{{ layout.css_class }}__image" style="background-image:url('{{ layout.background_image.url }}')"></div>
+    <article class="{{ layout.css_class }}__article w-100 position-absolute pp-one-third-xy">
+        <div class="container">
+            <div class="d-flex justify-content-around w-100">
+                <header class="col-10 col-md-8 col-lg-5 {{ layout.css_class }}__logo pp-bg-image d-block"></header>
+            </div>
+        </div>
+    </article>
+</section>
+
+{% if layout.content %}
+
+<section class="pp-black-bg">
+    <div class="container py-5 lead">
+        <div class="d-flex justify-content-around w-100 my-5">
+            <div class="col-10 col-md-8 d-block pp-monospace">
+                {{ layout.content }}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endif %}

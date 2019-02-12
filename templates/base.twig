@@ -8,18 +8,14 @@
 {% endblock %}
 
 	<body class="{{body_class}}" data-template="base.twig">
-		<header class="header fixed-top d-none">
-			{% block header %}
-				<div class="wrapper">
-					<h1 class="hdr-logo" role="banner">
-						<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
-					</h1>
-					<nav id="nav-main" class="nav-main" role="navigation">
-						{% include "menu.twig" with {'menu': menu.get_items} %}
-					</nav><!-- #nav -->
-				</div>
-			{% endblock %}
-		</header>
+
+	<a class="pp-orange-tab pp-bg-image" href="#support"></a>
+
+	{% block header %}
+				{% include 'header.twig' %}
+		
+		{% endblock %}
+		
 
 		<main id="main" role="main" class="main">
 				{% block content %}
@@ -28,9 +24,7 @@
 		</main>
 
 		{% block footer %}
-			<footer id="footer">
 				{% include 'footer.twig' %}
-			</footer>
 			{{ function('wp_footer') }}
 		{% endblock %}
 	</body>

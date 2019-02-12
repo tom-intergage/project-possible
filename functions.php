@@ -45,14 +45,25 @@ class StarterSite extends Timber\Site {
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
 		add_action('wp_enqueue_scripts', array($this, 'bootstrap'));
+		add_action('init',array($this,'options'));
 		parent::__construct();
 	}
 
-	function bootstrap() {
+	public function options() {
+		if( function_exists('acf_add_options_page') ) {
+			acf_add_options_page();
+		}
 		
+	}
+
+	public function bootstrap() {
 		wp_enqueue_style('bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css");
 		wp_enqueue_script( 'bootstrap-js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js', array('jquery'), '3.3.4', true );
+		wp_enqueue_script( 'slick;js', 'https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js', array('jquery'), '3.3.4', true );
+		wp_enqueue_style('slick-css', "https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css");
+		wp_enqueue_style('slick-theme-css', "https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css");
 		wp_enqueue_style('roboto', "https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,500,700");
+		wp_enqueue_script( 'actions', get_template_directory_uri().'/js/actions.js', array('jquery'), '3.3.4', true );
 	}
 	
 
@@ -70,9 +81,9 @@ class StarterSite extends Timber\Site {
 	 * @param string $context context['this'] Being the Twig's {{ this }}.
 	 */
 	public function add_to_context( $context ) {
-		$context['foo'] = 'bar';
-		$context['stuff'] = 'I am a value set in your functions.php file';
-		$context['notes'] = 'These values are available everytime you call Timber::get_context();';
+
+		$context['copyright'] = get_field('copyright_info', 'options');
+		$context['credit'] = get_field('credit_info', 'options');
 		$context['menu'] = new Timber\Menu();
 		$context['site'] = $this;
 		return $context;

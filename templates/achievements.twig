@@ -1,0 +1,16 @@
+<section class="achievements pp-grey-bg py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4">{{ layout.lead_text }}</div>
+            <div class="col-12 col-md-8">
+                <div class="row">
+                {% for achievement in layout.achievement %}
+                    <article class="col-12 col-md-4 achievements__record lead pp-monospace">
+                        <p>{{ achievement.text }}</p>
+                    </article>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
