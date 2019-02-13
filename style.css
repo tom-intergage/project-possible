@@ -157,20 +157,28 @@ p {
 .pp-mountain {
   position: relative;
   background-color: #282828;
-  overflow: hidden;
+  overflow-x: hidden;
   height: 130vh;
 }
 
+.pp-mountain__article {
+  top: 0;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 .pp-mountain__image {
-  background-size: cover;
-  background-position: center center;
+  background-size: auto 120vh;
+  background-position: center 10vh;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1);
-  top: 30vh;
+  top: 0;
   left: 0;
 }
 
@@ -204,22 +212,21 @@ p {
 
 .pp-possible__article {
   position: absolute;
-  top: 60vh;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
 }
 
 .pp-possible__logo {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 603.53 96.96"><defs><style>.cls-1{fill:#dadada;}</style></defs><title>Asset 13</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M19.59,62.41V95.66H0V1.3H37.09A43.22,43.22,0,0,1,55.93,5.18,28.86,28.86,0,0,1,68.44,16.24a30.66,30.66,0,0,1,4.37,16.3q0,13.86-9.56,21.87t-26.48,8Zm0-15.75h17.5q7.77,0,11.85-3.63T53,32.66q0-6.93-4.12-11.21T37.55,17h-18Z"/><path class="cls-1" d="M164.37,50.62q0,13.93-5,24.43a37.1,37.1,0,0,1-14.2,16.2A39.44,39.44,0,0,1,124,97a39.76,39.76,0,0,1-21.09-5.64A37.61,37.61,0,0,1,88.55,75.21a54.83,54.83,0,0,1-5.16-24.07V46.47q0-13.94,5.06-24.53a37.5,37.5,0,0,1,14.3-16.27A39.59,39.59,0,0,1,123.88,0,39.56,39.56,0,0,1,145,5.67a37.52,37.52,0,0,1,14.31,16.27q5.06,10.59,5.06,24.46Zm-19.85-4.28q0-14.83-5.36-22.55t-15.28-7.72q-9.85,0-15.22,7.62T103.24,46v4.6q0,14.45,5.36,22.42T124,81q9.86,0,15.15-7.68t5.36-22.39Z"/><path class="cls-1" d="M227.91,70.9A9.94,9.94,0,0,0,224,62.45q-3.92-3-14.11-6.23a100,100,0,0,1-16.13-6.45q-16.19-8.67-16.19-23.39a22.68,22.68,0,0,1,4.34-13.64,28.33,28.33,0,0,1,12.47-9.37A47.23,47.23,0,0,1,212.63,0a43,43,0,0,1,18.15,3.66A28.88,28.88,0,0,1,243.16,14a27,27,0,0,1,4.4,15.17H228q0-6.5-4.11-10.08t-11.56-3.6q-7.19,0-11.17,3a9.5,9.5,0,0,0-4,7.94q0,4.61,4.67,7.72T215.56,40q16.73,5,24.36,12.38a24.52,24.52,0,0,1,7.64,18.4q0,12.26-9.34,19.22t-25.14,7a48.83,48.83,0,0,1-20-4,31.64,31.64,0,0,1-13.75-10.92A27.85,27.85,0,0,1,174.62,66h19.66q0,15.61,18.8,15.62,7,0,10.91-2.82A9.17,9.17,0,0,0,227.91,70.9Z"/><path class="cls-1" d="M310.12,70.9a9.93,9.93,0,0,0-3.91-8.45q-3.93-3-14.11-6.23A100,100,0,0,1,276,49.77q-16.2-8.67-16.2-23.39a22.62,22.62,0,0,1,4.35-13.64,28.27,28.27,0,0,1,12.47-9.37A47.18,47.18,0,0,1,294.84,0,43.09,43.09,0,0,1,313,3.66,28.85,28.85,0,0,1,325.37,14a26.91,26.91,0,0,1,4.41,15.17H310.19q0-6.5-4.12-10.08t-11.55-3.6q-7.18,0-11.17,3a9.47,9.47,0,0,0-4,7.94q0,4.61,4.66,7.72T297.78,40q16.73,5,24.36,12.38a24.56,24.56,0,0,1,7.64,18.4q0,12.26-9.34,19.22T295.3,97a48.8,48.8,0,0,1-20-4,31.64,31.64,0,0,1-13.75-10.92A27.77,27.77,0,0,1,256.84,66h19.65q0,15.61,18.81,15.62,7,0,10.91-2.82A9.16,9.16,0,0,0,310.12,70.9Z"/><path class="cls-1" d="M363.87,95.66H344.28V1.3h19.59Z"/><path class="cls-1" d="M382,95.66V1.3h33.31q17.3,0,26.25,6.57t8.94,19.29a21.14,21.14,0,0,1-3.59,12.21,20.69,20.69,0,0,1-10,7.75,20.1,20.1,0,0,1,11.53,7.32,21.53,21.53,0,0,1,4.21,13.48q0,13.62-8.75,20.61T419,95.66Zm19.59-54.83h14.5q14.82-.26,14.82-11.73,0-6.42-3.75-9.24T415.33,17H401.61Zm0,13.74V80H418.4q6.92,0,10.8-3.27a11.19,11.19,0,0,0,3.89-9q0-13-13.52-13.16Z"/><path class="cls-1" d="M487,80h41.6V95.66H467.37V1.3H487Z"/><path class="cls-1" d="M597,54.77H559.38V80h44.15V95.66H539.79V1.3H603.4V17h-44V39.53H597Z"/></g></g></svg>');
-  opacity: 0.9;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center center;
 }
 
 .pp-possible__logo:after {
-  padding-top: 100%;
+  padding-top: 17%;
   display: block;
   content: "";
 }
@@ -377,15 +384,15 @@ p {
 }
 
 /* FOOTER */
-.slick-dots ul {
-  padding-top: 2.2rem;
+ul.slick-dots {
+  bottom: -37.5px;
 }
 
-.slick-dots li button:before {
+ul.slick-dots li button:before {
   color: #dadada !important;
 }
 
-.slick-dots li.active button:before {
+ul.slick-dots li.slick-active button:before {
   color: #ef8307 !important;
 }
 /*# sourceMappingURL=style.css.map */
