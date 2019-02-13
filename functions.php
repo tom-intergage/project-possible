@@ -85,10 +85,9 @@ class StarterSite extends Timber\Site {
 	 */
 	public function add_to_context( $context ) {
 
-		$context['copyright'] = get_field('copyright_info', 'options');
-		$context['credit'] = get_field('credit_info', 'options');
+		$context['options'] = get_fields('options');
 		$context['menu'] = new Timber\Menu();
-		$context['site'] = $this;
+		$context['site'] = $this; 
 		return $context;
 	}
 
