@@ -25,6 +25,12 @@ p {
   font-size: 1.1rem;
 }
 
+#header,
+#main {
+  position: relative;
+  z-index: 40;
+}
+
 #footer {
   position: fixed;
   bottom: 0;
@@ -371,7 +377,11 @@ p {
 }
 
 /* FOOTER */
-.slick-dots li button {
+.slick-dots li button:before {
+  color: #282828 !important;
+}
+
+.slick-dots li.active button:before {
   color: #dadada !important;
 }
 /*# sourceMappingURL=style.css.map */
