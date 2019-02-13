@@ -377,11 +377,15 @@ p {
 }
 
 /* FOOTER */
+.slick-dots ul {
+  padding-top: 2.2rem;
+}
+
 .slick-dots li button:before {
-  color: #282828 !important;
+  color: #dadada !important;
 }
 
 .slick-dots li.active button:before {
-  color: #dadada !important;
+  color: #ef8307 !important;
 }
 /*# sourceMappingURL=style.css.map */
