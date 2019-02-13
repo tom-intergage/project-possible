@@ -6,7 +6,7 @@
     slidesToShow: 4,
     slidesToScroll: 4,
     arrows:true,
-    dots: false,
+    dots: true,
     responsive: [
       {
         breakpoint: 1024,
