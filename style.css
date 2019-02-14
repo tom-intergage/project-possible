@@ -31,12 +31,14 @@ p {
   z-index: 40;
 }
 
-#footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: -1;
+@media screen and (min-width: 768px) {
+  #footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
 }
 
 #footer > div p {

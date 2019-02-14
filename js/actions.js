@@ -1,4 +1,5 @@
 (function($) {
+
   function Utils() {}
 
   Utils.prototype = {
@@ -20,7 +21,10 @@
   var Utils = new Utils();
 
   function setFooterHeight() {
-    $("body").css("margin-bottom", $("#footer").height());
+    if ($(window).width() > 767) {
+      $("body").css("margin-bottom", $("#footer").height());
+    }
+    
   }
   setFooterHeight();
 
