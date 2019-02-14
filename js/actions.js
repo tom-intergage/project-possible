@@ -21,7 +21,7 @@
   var Utils = new Utils();
 
   function setFooterHeight() {
-    if (window.width() > 767) {
+    if ($(window).width() > 767) {
       $("body").css("margin-bottom", $("#footer").height());
     }
     
@@ -38,7 +38,6 @@
 
     if (isElementInView) {
       var opac = parseInt(100 - (distance / height) * 100) - 30;
-      console.log(opac / 100);
       $(".pp-possible__article").css({
         bottom: 300 - distance + "px"
       });
