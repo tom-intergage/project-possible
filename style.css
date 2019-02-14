@@ -295,6 +295,12 @@ p {
   width: 100%;
 }
 
+@media screen and (max-width: 990px) {
+  .pp-call-to-action__article {
+    min-height: 200px;
+  }
+}
+
 @media screen and (min-width: 991px) {
   .pp-call-to-action__article {
     width: calc(100% / 3.5);
