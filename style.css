@@ -21,7 +21,7 @@ p {
   font-family: "Roboto", sans-serif;
 }
 
-p {
+li, p {
   font-size: 1.1rem;
 }
 
