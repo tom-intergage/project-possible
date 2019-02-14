@@ -121,7 +121,7 @@ p {
   min-height: 50vh;
 }
 
-@media screen and (min-width: 76px) {
+@media screen and (min-width: 768px) {
   .pp-split__article.pp-bg-image {
     height: 100vh;
   }
