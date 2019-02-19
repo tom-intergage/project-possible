@@ -430,6 +430,10 @@ p {
   }
 }
 
+.pp-text-area.large p {
+  font-size: 1.5rem !important;
+}
+
 #footer .pp-text-columns h5 {
   color: #ef8307;
   font-size: 2rem;
