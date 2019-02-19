@@ -472,15 +472,15 @@ p {
 }
 
 #footer .pp-text-columns__article:nth-child(2):before {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.02 23.4"><defs><style>.cls-1{fill:#f29100;}</style></defs><title>Triangle 1</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon class="cls-1" points="13.51 0 0 23.4 27.02 23.4 13.51 0"/></g></g></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.02 23.4"><defs><style>.cls-1{fill:#ef8307;}</style></defs><title>Triangle 1</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon class="cls-1" points="13.51 0 0 23.4 27.02 23.4 13.51 0"/></g></g></svg>');
 }
 
 #footer .pp-text-columns__article:nth-child(3):before {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.8 23.4"><defs><style>.cls-1{fill:#f29100;}</style></defs><title>Triangle 2</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon class="cls-1" points="0 23.4 9.36 23.4 15.38 13.1 10.66 4.93 0 23.4"/><polygon class="cls-1" points="27.29 0 13.78 23.4 40.8 23.4 27.29 0"/></g></g></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.8 23.4"><defs><style>.cls-1{fill:#ef8307;}</style></defs><title>Triangle 2</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon class="cls-1" points="0 23.4 9.36 23.4 15.38 13.1 10.66 4.93 0 23.4"/><polygon class="cls-1" points="27.29 0 13.78 23.4 40.8 23.4 27.29 0"/></g></g></svg>');
 }
 
 #footer .pp-text-columns__article:nth-child(4):before {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 23.4"><defs><style>.cls-1{fill:#f29100;}</style></defs><title>Triangle 3</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon class="cls-1" points="11.2 23.4 20.56 23.4 26.58 13.1 21.86 4.93 11.2 23.4"/><polygon class="cls-1" points="38.49 0 24.98 23.4 52 23.4 38.49 0"/><polygon class="cls-1" points="0 23.4 7.5 23.4 12.32 15.15 8.54 8.61 0 23.4"/></g></g></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 23.4"><defs><style>.cls-1{fill:#ef8307;}</style></defs><title>Triangle 3</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon class="cls-1" points="11.2 23.4 20.56 23.4 26.58 13.1 21.86 4.93 11.2 23.4"/><polygon class="cls-1" points="38.49 0 24.98 23.4 52 23.4 38.49 0"/><polygon class="cls-1" points="0 23.4 7.5 23.4 12.32 15.15 8.54 8.61 0 23.4"/></g></g></svg>');
 }
 
 .pp-achievements__article:not(:first-child) > p:first-child {
