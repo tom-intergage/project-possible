@@ -163,6 +163,16 @@ p {
   overflow: hidden;
 }
 
+#wdi_feed_0 {
+  background: transparent !important;
+  border: 0;
+}
+
+#wdi_feed_0 * {
+  background: transparent !important;
+  border: 0;
+}
+
 .pp-mountain {
   position: relative;
   background-color: #282828;
@@ -191,7 +201,7 @@ p {
 
 @media screen and (min-width: 768px) {
   .pp-mountain__image {
-    background-size: 100vw auto;
+    background-size: 110vw auto;
   }
 }
 
@@ -273,6 +283,10 @@ p {
 
 .pp-monospace * {
   font-family: "Roboto Mono", monospace;
+}
+
+.pp-white-bg {
+  background: #fff;
 }
 
 .pp-bg-image {
