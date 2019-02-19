@@ -39,7 +39,7 @@
     if (isElementInView) {
       var opac = parseInt(100 - (distance / height) * 100) - 30;
       $(".pp-possible__article").css({
-        bottom: 300 - distance + "px"
+        bottom: 300 - (distance/4) + "px"
       });
       $(".pp-possible__logo").css({
         opacity: opac / 80

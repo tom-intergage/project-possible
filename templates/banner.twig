@@ -3,22 +3,14 @@
     <article class="{{ layout.css_class }}__article w-100 position-absolute">
         <div class="container">
             <div class="d-flex justify-content-around w-100">
-                <header class="col-10 {% if layout.css_class == "pp-possible" %} col-lg-10 {% else %} col-lg-5 {% endif %} {{ layout.css_class }}__logo d-block"></header>
+                <header class="col-10 {% if layout.css_class == "pp-possible" %} col-lg-10 {% else %} col-lg-5 {% endif %} {{ layout.css_class }}__logo d-block">
+                    
+                </header>
+                
+            </div>
+            <div class="d-block pt-4{% if layout.css_class == "pp-possible" %} pp-orange-text text-uppercase{% endif %}">
+            {% if layout.content %}{{ layout.content }}{% endif %}
             </div>
         </div>
     </article>
 </section>
-
-{% if layout.content %}
-
-<section class="pp-black-bg">
-    <div class="container py-5 lead">
-        <div class="d-flex justify-content-around w-100 my-5">
-            <div class="col-10 col-md-8 d-block pp-monospace">
-                {{ layout.content }}
-            </div>
-        </div>
-    </div>
-</section>
-
-{% endif %}
