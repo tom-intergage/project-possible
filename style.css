@@ -179,14 +179,12 @@ p {
 }
 
 .pp-mountain__image {
-  background-size: auto 120vh;
+  background-size: 100vw auto;
   background-position: center 10vh;
   background-repeat: no-repeat;
   width: 100vw;
   height: 100%;
   position: absolute;
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
   top: 0;
   left: 0;
 }
