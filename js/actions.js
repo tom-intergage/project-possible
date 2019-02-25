@@ -104,6 +104,8 @@
     $(this).text(event.strftime("%D Days %-Hh %Mm %Ss"));
   });
 
+  $(".thumbnail.hover-stats").off('click');
+
   $(".thumbnail.hover-stats").click(function(e) {
     e.preventDefault();
     $(this).attr("href", $(this).data("link"));
