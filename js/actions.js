@@ -103,4 +103,9 @@
   $("#countdown .timer").countdown("2019/03/15", function(event) {
     $(this).text(event.strftime("%D Days %-Hh %Mm %Ss"));
   });
+
+  $(".thumbnail.hover-stats").click(function(e) {
+    e.preventDefault();
+    $(this).attr("href", $(this).data("link"));
+  });
 })(jQuery);
