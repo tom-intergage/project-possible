@@ -61,6 +61,7 @@ class StarterSite extends Timber\Site {
 		$date = $sdate->getTimestamp();
 		wp_enqueue_style('bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css");
 		wp_enqueue_script( 'bootstrap-js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js', array('jquery'), '3.3.4', true );
+		
 		wp_enqueue_script( 'countdown', get_template_directory_uri().'/js/countdown.js?v='.$date, array('jquery'), '3.3.4', true );
 		wp_enqueue_script( 'slick-js', 'https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js', array('jquery'), '3.3.4', true );
 		wp_enqueue_style('slick-css', "https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css");

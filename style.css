@@ -158,6 +158,14 @@ p {
   color: #ef8307;
 }
 
+.pp-orange-text a {
+  color: #ef8307;
+}
+
+.pp-orange-text a:hover {
+  color: #dadada;
+}
+
 .pp-banner {
   max-width: 100%;
   overflow: hidden;
@@ -255,6 +263,10 @@ p {
   padding-top: 100%;
   display: block;
   content: "";
+}
+
+iframe {
+  pointer-events: none;
 }
 
 .pp-possible {
