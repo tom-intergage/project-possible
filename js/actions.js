@@ -1,5 +1,4 @@
 (function($) {
-
   function Utils() {}
 
   Utils.prototype = {
@@ -24,7 +23,6 @@
     if ($(window).width() > 767) {
       $("body").css("margin-bottom", $("#footer").height());
     }
-    
   }
   setFooterHeight();
 
@@ -39,7 +37,7 @@
     if (isElementInView) {
       var opac = parseInt(100 - (distance / height) * 100) - 30;
       $(".pp-possible__article").css({
-        bottom: 300 - (distance/4) + "px"
+        bottom: 300 - distance / 4 + "px"
       });
       $(".pp-possible__logo").css({
         opacity: opac / 80
@@ -96,5 +94,13 @@
         }
       }
     ]
+  });
+
+  $(".pp-mountain").append(function() {
+    return '<div class="pp-mountain__countdown pp-monospace text-center" id="countdown"><div class="timer"></div><div class="container"><a href="#support"><span>Support Project Possible</span></a></div></div>';
+  });
+
+  $("#countdown .timer").countdown("2019/03/15", function(event) {
+    $(this).text(event.strftime("%D Days %-Hh %Mm %Ss"));
   });
 })(jQuery);
