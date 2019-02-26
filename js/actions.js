@@ -111,7 +111,6 @@
 
   $('a[href*="#"]').on('click', function (e) {
     e.preventDefault();
-  
     $('html, body').scrollTop($($(this).attr('href')).offset().top);
   });
 
