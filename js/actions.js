@@ -34,6 +34,13 @@
       distance = elementOffset - scrollTop,
       height = $(window).height();
 
+      if ($(window).scrollTop()> $(window).height()) {
+        $('.pp-orange-tab').css('display','block');
+      }
+      else {
+        
+      }
+
     if (isElementInView) {
       var opac = parseInt(100 - (distance / height) * 100) - 30;
       $(".pp-possible__article").css({
@@ -59,6 +66,7 @@
 
   $(window).on("scroll", function(e) {
     isInView();
+    
   });
 
   $(".pp-carousel__stage").slick({

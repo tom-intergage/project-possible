@@ -67,6 +67,12 @@ p {
   color: #030303;
 }
 
+@media screen and (max-width: 600px) {
+  .pp-orange-tab {
+    display: none;
+  }
+}
+
 .pp-orange-tab span {
   font-weight: 700;
 }
