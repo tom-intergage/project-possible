@@ -34,12 +34,10 @@
       distance = elementOffset - scrollTop,
       height = $(window).height();
 
-      if ($(window).scrollTop()> $(window).height()) {
-        $('.pp-orange-tab').css('display','block');
-      }
-      else {
-        
-      }
+    if ($(window).scrollTop() > $(window).height()) {
+      $(".pp-orange-tab").css("display", "block");
+    } else {
+    }
 
     if (isElementInView) {
       var opac = parseInt(100 - (distance / height) * 100) - 30;
@@ -66,7 +64,6 @@
 
   $(window).on("scroll", function(e) {
     isInView();
-    
   });
 
   $(".pp-carousel__stage").slick({
@@ -112,5 +109,10 @@
     $(this).text(event.strftime("%D Days %-Hh %Mm %Ss"));
   });
 
+  $('a[href*="#"]').on('click', function (e) {
+    e.preventDefault();
+  
+    $('html, body').scrollTop($($(this).attr('href')).offset().top);
+  });
 
 })(jQuery);
