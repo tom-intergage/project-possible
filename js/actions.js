@@ -20,11 +20,16 @@
   var Utils = new Utils();
 
   function setFooterHeight() {
+    
     if ($(window).width() > 767) {
       $("body").css("margin-bottom", $("#footer").height());
     }
-  }
-  setFooterHeight();
+    else {
+      $("body").css("margin-bottom",0);
+    }
+  } 
+
+  //setFooterHeight();
 
   function isInView() {
     var isElementInView = Utils.isElementInView($(".pp-possible"), false);
@@ -55,12 +60,12 @@
   var resizeTimer;
   var scrollTimer;
 
-  $(window).on("resize", function(e) {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function() {
-      setFooterHeight();
-    }, 250);
-  });
+  //$(window).on("resize", function(e) {
+    //clearTimeout(resizeTimer);
+    //resizeTimer = setTimeout(function() {
+      //setFooterHeight();
+    //}, 250);
+  //});
 
   $(window).on("scroll", function(e) {
     isInView();

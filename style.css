@@ -34,16 +34,6 @@ p {
   z-index: 40;
 }
 
-@media screen and (min-width: 768px) {
-  #footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
-  }
-}
-
 #footer > div p {
   display: inline;
 }
@@ -190,6 +180,8 @@ p {
 .pp-mountain {
   position: relative;
   background-color: #282828;
+  background: -webkit-gradient(linear, left top, left bottom, from(#282828), color-stop(70.71%, #030303)), -webkit-gradient(linear, left top, left bottom, from(#282828), color-stop(70.71%, #030303)), -webkit-gradient(linear, left top, left bottom, from(#282828), color-stop(70.71%, #030303));
+  background: linear-gradient(180deg, #282828, #030303 70.71%), linear-gradient(180deg, #282828, #030303 70.71%), linear-gradient(180deg, #282828, #030303 70.71%);
   overflow-x: hidden;
   height: 130vh;
 }
@@ -277,7 +269,7 @@ p {
   content: "";
 }
 
-iframe {
+iframe.snapwidget-widget {
   pointer-events: none;
 }
 
