@@ -1,8 +1,13 @@
 <section class="{{ layout.style }} {{ layout.colour }} py-5">
     <div class="container">
-        <div class="row">
+
+    {% if layout.title != "" %}
+        <h3 class="text-center pp-monospace py-4">{{ layout.title }}</h3>
+    {% endif %}
+
+        <div class="row {{ layout.row_class }}">
             {% for column in layout.columns %}
-                <article class="mb-5 mb-md-0 col-12 col-md {{ layout.style }}__article{% if loop.index == 1 %} lead{% endif %}">
+                <article class="mb-5 mb-md-0 col-12 {{ layout.columns_per_row }} {{ layout.style }}__article{% if loop.index == 1 %} lead{% endif %}">
                         {{ column.content }}
                 </article>
             {% endfor %} 

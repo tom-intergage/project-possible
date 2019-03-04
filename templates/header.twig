@@ -1,11 +1,15 @@
-<header class="header fixed-top d-none">
-
-				<div class="wrapper">
-					<h1 class="hdr-logo" role="banner">
-						<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
-					</h1>
-					<nav id="nav-main" class="nav-main" role="navigation">
-						{% include "menu.twig" with {'menu': menu.get_items} %}
-					</nav><!-- #nav -->
-				</div>
-		</header>
+<header class="header fixed-top pp-black-bg">
+	<div class="container-fluid">
+	<div class="row justify-content-between justify-content-md-end">
+		{#<nav id="nav-main" class="pp-main-nav" role="navigation">
+			{% include "menu.twig" with {'menu': menu.get_items} %}
+		</nav>#}
+		<nav id="social-nav" class="pp-social-menu">
+			{% include "menu.twig" with {'menu': social.get_items} %}
+		</nav>
+		<div class="pp-support-cta pp-monospace">
+			<a href="#support">Support</a>
+		</div>
+	</div>
+	</div>
+</header>
