@@ -280,15 +280,16 @@ p {
   content: "";
 }
 
-.alignleft {
+.aligncenter {
+  margin: 0px auto;
   display: inline-block;
+}
+
+.alignleft {
+  float: left;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   margin-right: 1rem;
-}
-
-.align-left ~ * {
-  display: inline-block;
 }
 
 iframe.snapwidget-widget {
