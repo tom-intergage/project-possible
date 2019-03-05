@@ -282,7 +282,7 @@ p {
 
 .aligncenter {
   margin: 0px auto;
-  display: inline-block;
+  display: block;
 }
 
 .alignleft {
