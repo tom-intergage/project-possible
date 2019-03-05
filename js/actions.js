@@ -107,7 +107,7 @@
   });
 
   $(".pp-mountain").append(function() {
-    return '<div class="pp-mountain__countdown pp-monospace text-center" id="countdown"><p class="pb-3 d-none d-md-block"><strong>The countdown is on! Only a few days left to show your support and help this extraordinary attempt to become a reality!</strong></p><div class="timer"></div><div class="container"><a href="#support" class="d-block d-md-inline-block"><span>Support Project Possible</span></a></div></div>';
+    return '<div class="pp-mountain__countdown pp-monospace text-center" id="countdown"><p class="pb-3 d-none d-md-block"><strong>The countdown is on! Only a few days left to show your support and help this extraordinary attempt to become a reality!</strong></p><div class="timer"></div><div class="container"><a target="_blank" href="https://projectpossible.co.uk/#support" class="d-block d-md-inline-block"><span>Support Project Possible</span></a></div></div>';
   });
 
   $("#countdown .timer").countdown("2019/03/15", function(event) {
