@@ -21,7 +21,15 @@
  * @since    Timber 0.1
  */
 
+
+
 $context = Timber::get_context();
 $post = new TimberPost();
 $context['post'] = $post;
+
+$args = array(
+	'posts_per_page' => 3
+);
+$context['latest'] = Timber::get_posts($args);
+
 Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig' ), $context );

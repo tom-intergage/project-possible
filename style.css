@@ -296,6 +296,39 @@ iframe.snapwidget-widget {
   pointer-events: none;
 }
 
+.pp-article-banner {
+  height: 50vh;
+}
+
+.pp-article-banner__image {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 50vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pp-article {
+  padding: 2rem 0;
+}
+
+.pp-article__title {
+  padding-bottom: 0rem;
+}
+
+.pp-article__date {
+  padding-bottom: 1rem;
+  color: #ef8307;
+  font-size: 1.2rem;
+}
+
+.pp-article__body > *:last-child {
+  margin-bottom: 0;
+}
+
 .pp-possible {
   height: 100vh;
 }
@@ -330,6 +363,44 @@ iframe.snapwidget-widget {
   padding-top: 17%;
   display: block;
   content: "";
+}
+
+.pp-article-summary {
+  border: none;
+}
+
+.pp-article-summary a:hover {
+  color: #ef8307;
+}
+
+.pp-article-summary__title {
+  color: #dadada;
+}
+
+.pp-article-summary__title:hover {
+  color: #ef8307;
+  color: #dadada;
+}
+
+.pp-article-summary__date {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ef8307;
+}
+
+.pp-article-summary__image {
+  display: block;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.pp-article-summary__image:after {
+  padding-top: 56.25%;
+  content: "";
+  display: block;
+  width: 100%;
 }
 
 .lead h4 {
@@ -426,7 +497,17 @@ iframe.snapwidget-widget {
 }
 
 .pp-main-nav ul li a {
-  line-height: 2rem;
+  display: block;
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 3rem;
+  padding: 0 1rem;
+  color: #dadada;
+}
+
+.pp-main-nav ul li a:hover {
+  text-decoration: none;
+  background: #ef8307;
 }
 
 .pp-support-cta {

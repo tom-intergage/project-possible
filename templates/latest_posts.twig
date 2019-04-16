@@ -1,17 +1,11 @@
-{% extends "base.twig" %}
-
-{% block content %}
-
 <section class="pp-text-columns pp-charcoal-bg py-5">
     <div class="container">
             <h3 class="text-center pp-monospace py-4">Project Possible Blog</h3>
-        <div class="row ">
-		{% for post in posts %}
+        <div class="row">
+		{% for post in latest %}
 			{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
 		{% endfor %}             
         </div>
 		{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
     </div>
 </section>
-	
-{% endblock %}

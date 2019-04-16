@@ -1,10 +1,10 @@
 <header class="header fixed-top pp-black-bg">
 	<div class="container-fluid">
-	<div class="row justify-content-end">
-		{#<nav id="nav-main" class="pp-main-nav" role="navigation">
+	<div class="row justify-content-start">
+		<nav id="nav-main" class="pp-main-nav" role="navigation">
 			{% include "menu.twig" with {'menu': menu.get_items} %}
-		</nav>#}
-		<nav id="social-nav" class="pp-social-menu">
+		</nav>
+		<nav id="social-nav" class="pp-social-menu ml-auto">
 			{% include "menu.twig" with {'menu': social.get_items} %}
 		</nav>
 		<div class="pp-support-cta pp-monospace">
