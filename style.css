@@ -173,6 +173,16 @@ p {
   overflow: hidden;
 }
 
+.pp-banner__section-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #282828;
+  padding: 1rem;
+}
+
 #wdi_feed_0 {
   background: transparent !important;
   border: 0;
