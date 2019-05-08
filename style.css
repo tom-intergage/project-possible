@@ -407,11 +407,11 @@ iframe.snapwidget-widget {
   color: #ef8307;
 }
 
-.pp-article-summary.press__title {
+.pp-article-summary.press .pp-article-summary__title {
   color: #282828;
 }
 
-.pp-article-summary.press__title:hover {
+.pp-article-summary.press .pp-article-summary__title:hover {
   color: #ef8307;
 }
 
