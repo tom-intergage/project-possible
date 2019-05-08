@@ -181,6 +181,7 @@ p {
           transform: translate(-50%, -50%);
   background: #282828;
   padding: 1rem;
+  color: #dadada;
 }
 
 #wdi_feed_0 {
@@ -395,6 +396,22 @@ iframe.snapwidget-widget {
 .pp-article-summary__date {
   font-size: 1.2rem;
   font-weight: 500;
+  color: #ef8307;
+}
+
+.pp-article-summary.press a {
+  color: #282828;
+}
+
+.pp-article-summary.press a:hover {
+  color: #ef8307;
+}
+
+.pp-article-summary.press__title {
+  color: #282828;
+}
+
+.pp-article-summary.press__title:hover {
   color: #ef8307;
 }
 
