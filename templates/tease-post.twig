@@ -6,7 +6,7 @@
 
 	<a href="{{post.link}}">
 	{% if post.thumbnail.src %}
-	<div class="pp-article-summary__image" style="background-image:url('{{ post.thumbnail.src('small') }}')"></div>
+	<div class="pp-article-summary__image" style="background-image:url({{ post.thumbnail.src('medium') }})"></div>
 	{% endif %}
 	<h3 class="pt-2 pp-article-summary__title">{{post.title}}</h3>
 	<h4 class="pb-2 pp-article-summary__date pp-orange-text">{{post.date}}</h4>
