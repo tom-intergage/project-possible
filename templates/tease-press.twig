@@ -1,0 +1,17 @@
+{% extends "tease.twig" %}
+
+{% block content %}
+
+<article class="mb-5 mb-md-0 col-12 col-md-4 pp-article-summary">
+
+	<a href="{{post.link}}">
+	{% if post.thumbnail.src %}
+	<div class="pp-article-summary__image" style="background-image:url('{{post.thumbnail.src}}')"></div>
+	{% endif %}
+	<h3 class="pt-2 pp-article-summary__title">{{post.title}}</h3>
+	<h4 class="pb-2 pp-article-summary__date pp-orange-text">{{post.date}}!</h4>
+	</a>
+
+</article>
+
+{% endblock %}
