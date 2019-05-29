@@ -4,15 +4,17 @@
   Utils.prototype = {
     constructor: Utils,
     isElementInView: function(element, fullyInView) {
-      var pageTop = $(window).scrollTop();
-      var pageBottom = pageTop + $(window).height();
-      var elementTop = $(element).offset().top;
-      var elementBottom = elementTop + $(element).height();
+      if ($(element)) {
+        var pageTop = $(window).scrollTop();
+        var pageBottom = pageTop + $(window).height();
+        var elementTop = $(element).offset().top;
+        var elementBottom = elementTop + $(element).height();
 
-      if (fullyInView === true) {
-        return pageTop < elementTop && pageBottom > elementBottom;
-      } else {
-        return elementTop <= pageBottom && elementBottom >= pageTop;
+        if (fullyInView === true) {
+          return pageTop < elementTop && pageBottom > elementBottom;
+        } else {
+          return elementTop <= pageBottom && elementBottom >= pageTop;
+        }
       }
     }
   };
@@ -20,14 +22,12 @@
   var Utils = new Utils();
 
   function setFooterHeight() {
-    
     if ($(window).width() > 767) {
       $("body").css("margin-bottom", $("#footer").height());
+    } else {
+      $("body").css("margin-bottom", 0);
     }
-    else {
-      $("body").css("margin-bottom",0);
-    }
-  } 
+  }
 
   //setFooterHeight();
 
@@ -61,10 +61,10 @@
   var scrollTimer;
 
   //$(window).on("resize", function(e) {
-    //clearTimeout(resizeTimer);
-    //resizeTimer = setTimeout(function() {
-      //setFooterHeight();
-    //}, 250);
+  //clearTimeout(resizeTimer);
+  //resizeTimer = setTimeout(function() {
+  //setFooterHeight();
+  //}, 250);
   //});
 
   $(window).on("scroll", function(e) {
@@ -105,7 +105,7 @@
       }
     ]
   });
-  
+
   /*
 
   $(".pp-mountain").append(function() {
@@ -122,10 +122,8 @@
   
   */
 
-  $('a[href*="#"]').on('click', function (e) {
+  $('a[href*="#"]').on("click", function(e) {
     e.preventDefault();
-    $('html, body').scrollTop($($(this).attr('href')).offset().top);
+    $("html, body").scrollTop($($(this).attr("href")).offset().top);
   });
-  
-
 })(jQuery);
