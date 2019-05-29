@@ -4,7 +4,7 @@
   Utils.prototype = {
     constructor: Utils,
     isElementInView: function(element, fullyInView) {
-      if ($(element)) {
+      if ($(element).length > 0) {
         var pageTop = $(window).scrollTop();
         var pageBottom = pageTop + $(window).height();
         var elementTop = $(element).offset().top;
