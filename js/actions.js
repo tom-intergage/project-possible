@@ -54,7 +54,7 @@
       });
     }
   }
-  isInView();
+//  isInView();
 
   //RESIZE STUFF
   var resizeTimer;
