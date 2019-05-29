@@ -67,9 +67,9 @@
   //}, 250);
   //});
 
-  $(window).on("scroll", function(e) {
-    isInView();
-  });
+  // $(window).on("scroll", function(e) {
+  //   isInView();
+  // });
 
   $(".pp-carousel__stage").slick({
     dots: true,
