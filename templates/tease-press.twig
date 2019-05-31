@@ -4,13 +4,13 @@
  
 <article class="mb-5 mb-md-0 col-12 col-md-4 pp-article-summary press">
 
-	<a href="{{ post.custom.external_link }}" target="_blank" rel="noopener">
+	<a href="{{ post.custom.external_link }}" class="pp-orange-text" target="_blank" rel="noopener">
 	{% if post.thumbnail.src %}
 	<div class="pp-article-summary__image press-image" style="background-image:url({{post.thumbnail.src('medium') }})"></div>
 	{% endif %}
-	<h3 class="pt-2 pp-article-summary__title">{{post.title}}</h3>
+	<h3 class="pt-2 pp-article-summary__title pp-orange-text">{{post.title}}</h3>
 	{#<h4 class="pb-2 pp-article-summary__date pp-orange-text">{{post.date}}</h4>#}
-	<div class="pp-artcle-summary__summary pb-2">{{post.content}}</div>
+	<div class="pp-artcle-summary__summary pb-2 pp-orange-text">{{post.content}}</div>
 	</a>
 
 </article>
