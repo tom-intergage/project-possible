@@ -833,6 +833,12 @@ iframe.snapwidget-widget {
 }
 
 /* FOOTER */
+@media (max-width: 600px) {
+  .header .pp-social-menu {
+    display: none;
+  }
+}
+
 ul.slick-dots {
   bottom: -37.5px;
 }
