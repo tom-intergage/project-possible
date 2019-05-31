@@ -401,6 +401,7 @@ iframe.snapwidget-widget {
 
 .pp-article-summary.press a {
   color: #ef8307;
+  text-decoration: none;
 }
 
 .pp-article-summary.press a:hover {
