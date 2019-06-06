@@ -1,15 +1,22 @@
 <header class="header fixed-top pp-black-bg">
-	<div class="container-fluid">
-	<div class="row justify-content-start">
-		<nav id="nav-main" class="pp-main-nav" role="navigation">
-			{% include "menu.twig" with {'menu': menu.get_items} %}
-		</nav>
-		<nav id="social-nav" class="pp-social-menu ml-auto">
-			{% include "menu.twig" with {'menu': social.get_items} %}
-		</nav>
-		<div class="pp-support-cta pp-monospace">
-			<a href="https://www.gofundme.com/147-power-of-possible" target="_blank">Support</a>
-		</div>
-	</div>
-	</div>
+    <div class="container-fluid">
+        <div class="d-flex justify-content-around justify-content-lg-end align-items-center">
+            <nav class="pp-main-nav" id="nav-main" role="navigation">
+                {% include "menu.twig" with {'menu': menu.get_items} %}
+            </nav>
+            <nav class="pp-social-menu ml-auto" id="social-nav">
+                {% include "menu.twig" with {'menu': social.get_items} %}
+            </nav>
+            <div class="pp-support-cta pp-monospace">
+                <a href="https://www.gofundme.com/147-power-of-possible" target="_blank">Support</a>
+            </div>
+            <div class="pp-burger" id="burger">
+                <div class="pp-burger__inner">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>

@@ -1,32 +1,37 @@
 {% block html_head_container %}
 
-{% include 'html-header.twig' %}
-	{% block head %}
-	{% endblock %}
+    {% include 'html-header.twig' %}
+    {% block head %}{% endblock %}
 
-	</head>
-{% endblock %}
+</head>{% endblock %}<body
+class="{{body_class}}" data-template="base.twig">
 
-	<body class="{{body_class}}" data-template="base.twig">
+{#<a class="pp-orange-tab" href="#support"><span class="d-block text-center pb-2 small text-uppercase">Support</span><span class="pp-bg-image"></span></a>#}
 
-	{#<a class="pp-orange-tab" href="#support"><span class="d-block text-center pb-2 small text-uppercase">Support</span><span class="pp-bg-image"></span></a>#}
+<div id="wrap">
 
-	{% block header %}
-				{% include 'header.twig' %}
-		
-		{% endblock %}
-		
+    {% block header %}
+        {% include 'header.twig' %}
 
-		<main id="main" role="main" class="main">
-				{% block content %}
-					Sorry, no content
-				{% endblock %}
-		</main>
+    {% endblock %}
 
-		{% block footer %}
-				{% include 'footer.twig' %}
-			{{ function('wp_footer') }}
-		{% endblock %}
-		<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us20.list-manage.com","uuid":"730a1800ffbc22891763b5518","lid":"2855dd5de1","uniqueMethods":true}) })</script>
-	</body>
-</html>
+
+    <main class="main" id="main" role="main">
+        {% block content %}
+            Sorry, no content
+        {% endblock %}
+    </main>
+
+    {% block footer %}
+        {% include 'footer.twig' %}
+        {{ function('wp_footer') }}
+    {% endblock %}
+
+</div>
+
+<script data-dojo-config="usePlainJson: true, isDebug: false" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" type="text/javascript"></script>
+<script type="text/javascript">
+    window.dojoRequire(["mojo/signup-forms/Loader"], function (L) {
+        L.start({"baseUrl": "mc.us20.list-manage.com", "uuid": "730a1800ffbc22891763b5518", "lid": "2855dd5de1", "uniqueMethods": true})
+    })
+</script></body></html>

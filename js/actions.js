@@ -126,4 +126,33 @@
     e.preventDefault();
     $("html, body").scrollTop($($(this).attr("href")).offset().top);
   });
+
+
+  $(document).ready(function() {
+    $("#nav-main").mmenu(
+      
+      {
+        extensions: ["position-right"],
+      },
+      {
+       clone:true,
+        offCanvas: {
+          pageSelector: "#wrap",
+       
+        }
+      }
+    );
+
+    $('#mm-nav-main').removeClass('pp-main-nav');
+  
+    var api = $("#mm-nav-main").data("mmenu");
+  
+    $("#burger").click(function() {
+      api.open();
+    });
+    $("#close").click(function() {
+      api.close();
+    });
+  });
+
 })(jQuery);
