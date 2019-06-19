@@ -277,8 +277,8 @@ p {
 }
 
 .pp-home-banner__article .pp-support-cta.orange a {
-  background: #ef8307;
-  color: #030303;
+  background: #ef8307 !important;
+  color: #030303 !important;
 }
 
 .pp-home-banner__article h1,
