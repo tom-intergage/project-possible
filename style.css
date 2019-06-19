@@ -910,7 +910,7 @@ iframe.snapwidget-widget {
   background-repeat: no-repeat;
   padding-top: 80%;
   width: 80%;
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
 }
 
 .pp-achievements__article:before:last-child > p:first-child:before {
