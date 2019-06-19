@@ -274,20 +274,14 @@ p {
 }
 
 .pp-mountain__image {
-  background-size: auto 130vh;
-  background-position: center 10vh;
+  background-size: auto 100%;
+  background-position: center bottom;
   background-repeat: no-repeat;
   width: 100vw;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-}
-
-@media screen and (min-width: 1200px) {
-  .pp-mountain__image {
-    background-size: 110vw auto;
-  }
 }
 
 .pp-mountain__logo {
