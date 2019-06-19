@@ -274,7 +274,7 @@ p {
 }
 
 .pp-mountain__image {
-  background-size: auto 100%;
+  background-size: 100% auto;
   background-position: center bottom;
   background-repeat: no-repeat;
   width: 100vw;
