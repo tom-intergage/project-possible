@@ -67,7 +67,7 @@
 
                         <div class="w-100 text-center pp-monospace">
                             Phase
-                            {{phaseID}}
+                            {{phaseID}}{% if phase.end_date %} - Completed{% endif %}
                         </div>
 
                         {% for mountain in phase.mountain %}
