@@ -111,12 +111,6 @@ p {
   color: #dadada;
 }
 
-@media screen and (min-width: 768px) {
-  .pp-black-bg.header {
-    background: transparent;
-  }
-}
-
 .pp-grey-bg {
   background: #dadada;
   color: #030303;
@@ -204,6 +198,55 @@ p {
 #wdi_feed_0 * {
   background: transparent !important;
   border: 0;
+}
+
+.pp-home-banner {
+  background-color: #282828;
+  background: -webkit-gradient(linear, left top, left bottom, from(#282828), color-stop(70.71%, #282828), to(#030303)), -webkit-gradient(linear, left top, left bottom, from(#282828), color-stop(70.71%, #282828), to(#030303)), -webkit-gradient(linear, left top, left bottom, from(#282828), color-stop(70.71%, #282828), to(#030303));
+  background: linear-gradient(180deg, #282828, #282828 70.71%, #030303 100%), linear-gradient(180deg, #282828, #282828 70.71%, #030303 100%), linear-gradient(180deg, #282828, #282828 70.71%, #030303 100%);
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.pp-home-banner__article {
+  top: 10vh;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media screen and (min-width: 768px) {
+  .pp-home-banner__article {
+    top: 0;
+  }
+}
+
+.pp-home-banner__article {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: transformY(-50%);
+          transform: transformY(-50%);
+  left: 0;
+  max-width: 50vw;
+}
+
+.pp-home-banner__image {
+  background-size: auto 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .pp-home-banner__image {
+    background-position: right 45%;
+    background-size: 100% auto;
+  }
 }
 
 .pp-mountain {
