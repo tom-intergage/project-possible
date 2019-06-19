@@ -1,0 +1,89 @@
+{% set randomId = random(99) %}
+<div class="pp-black-bg py-5">
+    <div class="container pp-mountain-container d-flex">
+        <section class="pp-mountain-explorer" id="pp-mountains__{{randomId}}">
+            <div class="pp-mountain-explorer__inner w-100">
+                <div class="pp-mountain-explorer__navigation pp-monospace">
+                    <div class="pp-mountain-explorer__navigation__prev">
+                        <span></span>
+                    </div>
+                    <div class="pp-mountain-explorer__navigation__next">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="pp-mountain-explorer__scale pp-monospace" style="background-image:url('{{ theme.link }}/img/ruler.svg')">
+                    <div>
+                        <span>0m</span>
+                    </div>
+                </div>
+                <div class="pp-mountain-explorer__phases d-flex justify-content-between">
+
+                    {% set mountainIDT = 1 %}
+                    {% set phaseIDT = 1 %}
+
+                    {% for phase in layout.phases %}
+                        {#<div class="pp-mountain-explorer__phases__phase d-flex" data-status="{{ phase.status }}">#}
+
+                        {% for mountain in phase.mountain %}
+                            <article class="pp-mountain-explorer__mountain{% if mountain.summit_date %} completed{% endif %}" data-mountain-height="{{ mountain.height}}" style="background-image:url('{{ theme.link }}/img/{{ mountain.outline}}');" id="pp-mountains__{{randomId}}__mountain-{{mountainIDT}}">
+                                <div class="pp-mountain-explorer__mountain__inner pp-monospace pp-orange">
+                                    <span class="pp-mountain-explorer__mountain__name">
+                                        {{ mountain.name }}
+                                    </span>
+                                    <span class="pp-mountain-explorer__mountain__country" data-height="{{ mountain.country}}">
+                                        Phase
+                                        {{ phaseIDT }}
+                                        //
+                                        {{ mountain.country}}
+                                    </span>
+                                    {% if mountain.summit_date %}
+                                        <span class="pp-mountain-explorer__mountain__summit-date pp-orange-text">
+                                            Summited:
+                                            {{ mountain.summit_date}}
+                                        </span>
+                                    {% endif %}
+                                </div>
+
+                            </article>
+                            {% set mountainIDT = mountainIDT + 1 %}
+
+                        {% endfor %}
+                        {% set phaseIDT = + 1 %}
+                        {#</div>#}
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        {% set mountainID = 1 %}
+        {% set phaseID = 0 %}
+
+        <div>
+
+            <div class="pp-mountain-explorer__thumbnails d-none d-md-flex justify-content-start mt-3">
+                {% for phase in layout.phases %}
+                    {% set phaseID = phaseID + 1 %}
+                    <div class="d-flex phase-{{phaseID}}{% if phase.start_date %} started{% endif %}{% if phase.end_date %} ended{% endif %}">
+
+                        <div class="w-100 text-center pp-monospace">
+                            Phase
+                            {{phaseID}}
+                        </div>
+
+                        {% for mountain in phase.mountain %}
+
+                            <article class="pp-mountain-explorer__thumbnails__thumbnail{% if mountain.summit_date %} completed{% endif %} {% if loop.index == 1 %} first-in-loop{% endif %}" data-mountain-height="{{ mountain.height}}" {#style="background-image:url('{{ theme.link }}/img/{{ mountain.outline}}');"#} data-mountain-no="{{ mountainID }}" id="pp-mountains__{{randomId}}__thumbnail-{{mountainID}}">
+                                <div class="pp-mountain-explorer__thumbnails__thumbnail__inner">
+                                    <span class="pp-mountain-explorer__thumbnails__thumbnail__name text-center d-block w-100 pp-monospace">
+                                        {{ mountainID }}
+                                    </span>
+                                </div>
+                            </article>
+                            {% set mountainID = mountainID + 1 %}
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>

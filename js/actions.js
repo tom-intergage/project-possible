@@ -54,7 +54,7 @@
       });
     }
   }
-//  isInView();
+  //  isInView();
 
   //RESIZE STUFF
   var resizeTimer;
@@ -106,47 +106,28 @@
     ]
   });
 
-  /*
-
-  $(".pp-mountain").append(function() {
-    return '<div class="pp-mountain__countdown pp-monospace text-center" id="countdown"><p class="pb-3 d-none d-md-block"><strong>Show your support and help this extraordinary attempt to become a reality!</strong></p><div class="timers"></div><div class="container"><a target="_blank" href="https://www.gofundme.com/147-power-of-possible" class="d-block d-md-inline-block"><span>Support Project Possible</span></a></div></div>';
-  });
- 
-  $(".pp-mountain").append(function() {
-    return '<div class="pp-mountain__countdown pp-monospace text-center" id="countdown"><p class="pb-3 d-none d-md-block"><strong>The countdown is on! Only a few days left to show your support and help this extraordinary attempt to become a reality!</strong></p><div class="timer"></div><div class="container"><a target="_blank" href="https://www.gofundme.com/147-power-of-possible" class="d-block d-md-inline-block"><span>Support Project Possible</span></a></div></div>';
-  });
-
-  $("#countdown .timer").countdown("2019/03/15", function(event) {
-    $(this).text(event.strftime("%D Days %-Hh %Mm %Ss"));
-  });
-  
-  */
-
   $('a[href*="#"]').on("click", function(e) {
     e.preventDefault();
     $("html, body").scrollTop($($(this).attr("href")).offset().top);
   });
 
-
   $(document).ready(function() {
     $("#nav-main").mmenu(
-      
       {
-        extensions: ["position-right"],
+        extensions: ["position-right"]
       },
       {
-       clone:true,
+        clone: true,
         offCanvas: {
-          pageSelector: "#wrap",
-       
+          pageSelector: "#wrap"
         }
       }
     );
 
-    $('#mm-nav-main').removeClass('pp-main-nav');
-  
+    $("#mm-nav-main").removeClass("pp-main-nav");
+
     var api = $("#mm-nav-main").data("mmenu");
-  
+
     $("#burger").click(function() {
       api.open();
     });
@@ -155,4 +136,98 @@
     });
   });
 
+  function setMountainHeight(activeMountain) {
+    var h = activeMountain.attr("data-mountain-height");
+    var perc = Number(100 - ((h - 8000) / 1000) * 100);
+    var myID = "#" + activeMountain.attr("id");
+
+    console.log(myID);
+
+    //$(myID).css("background-position-y", perc + "%");
+  }
+
+  function moveSlider(slider, activeMountainHeight) {
+    var perc = ((activeMountainHeight - 8000) / 1000) * 100;
+    slider
+      .find(".pp-mountain-explorer__scale > div")
+      .css({ bottom: perc + "%" })
+      .html(function() {
+        return "<span>" + activeMountainHeight + "m</span>";
+      });
+  }
+
+  function makeMountainActive(stage, newIndex) {
+    var percentage = newIndex == 0 ? "0%" : "-" + (newIndex - 1) * 100 + "%";
+    var rID = stage.attr("id");
+    var randomMountainID = "#" + rID + "__mountain-" + newIndex;
+    var randomID = "#" + rID + "__thumbnail-" + newIndex;
+
+    stage.find(".pp-mountain-explorer__mountain").removeClass("active");
+
+    $(".pp-mountain-explorer__thumbnails__thumbnail").removeClass("active");
+
+    $(randomMountainID).addClass("active");
+    $(randomID).addClass("active");
+
+    $(".pp-mountain-explorer__phases").css({
+      left: percentage
+    });
+
+    var newActiveMountain = stage.find(
+      ".pp-mountain-explorer__mountain.active"
+    );
+    var newActiveMountainHeight = Number(
+      newActiveMountain.attr("data-mountain-height")
+    );
+
+    moveSlider(stage, newActiveMountainHeight);
+  }
+
+  $(".pp-mountain-explorer").each(function() {
+    //SET THE FIRST ITEM OF THE SLIDER AS ACTIVE
+    $(this)
+      .find(".pp-mountain-explorer__mountain:first-child")
+      .addClass("active");
+
+    var randomID = "#" + $(this).attr("id") + "__thumbnail-1";
+
+    $(randomID).addClass("active");
+
+    var activeMountain = $(this).find(".pp-mountain-explorer__mountain.active");
+    var activeMountainHeight = Number(
+      activeMountain.attr("data-mountain-height")
+    );
+
+    moveSlider($(this), activeMountainHeight);
+
+    $(this)
+      .find(".pp-mountain-explorer__mountain")
+      .each(function() {
+        setMountainHeight($(this));
+      });
+
+    var stageID = "#" + $(this).attr("id");
+
+    $(this)
+      .find(".pp-mountain-explorer__navigation__next")
+      .click(function() {
+        var activeM = $(".pp-mountain-explorer__thumbnails__thumbnail.active");
+        var currentIndex = Number(activeM.attr("data-mountain-no"));
+        var newIndex = currentIndex < 14 ? currentIndex + 1 : 1;
+        makeMountainActive($(stageID), newIndex);
+      });
+    $(this)
+      .find(".pp-mountain-explorer__navigation__prev")
+      .click(function() {
+        var activeM = $(".pp-mountain-explorer__thumbnails__thumbnail.active");
+        var currentIndex = Number(activeM.attr("data-mountain-no"));
+        var newIndex = currentIndex == 1 ? 14 : currentIndex - 1;
+        makeMountainActive($(stageID), newIndex);
+      });
+    $(".pp-mountain-explorer__thumbnails__thumbnail").click(function() {
+      var o = Number($(this).attr("data-mountain-no"));
+
+      makeMountainActive($(stageID), o);
+    });
+  });
 })(jQuery);

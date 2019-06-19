@@ -156,6 +156,18 @@ p {
           transform: translate(-50%, -50%);
 }
 
+.pp-green-text {
+  color: #07ef0e;
+}
+
+.pp-green-text a {
+  color: #07ef0e;
+}
+
+.pp-green-text a:hover {
+  color: #07ef0e;
+}
+
 .pp-orange-text {
   color: #ef8307;
 }
@@ -902,7 +914,7 @@ iframe.snapwidget-widget {
   background-repeat: no-repeat;
   padding-top: 50%;
   width: 50%;
-  margin: 0 0 2rem 0;
+  margin: 0 02rem 0;
 }
 
 @media (max-width: 767px) {
@@ -932,6 +944,348 @@ ul.slick-dots li button:before {
 
 ul.slick-dots li.slick-active button:before {
   color: #ef8307 !important;
+}
+
+.pp-mountain-container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.pp-mountain-explorer {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  width: 100%;
+  height: 65vh;
+}
+
+@media (min-width: 767px) {
+  .pp-mountain-explorer {
+    height: 75vh;
+  }
+}
+
+@media (min-width: 1025px) {
+  .pp-mountain-explorer {
+    height: 65vh;
+  }
+}
+
+.pp-mountain-explorer + div {
+  width: 100%;
+  height: auto;
+}
+
+.pp-mountain-explorer__navigation {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 300;
+}
+
+.pp-mountain-explorer__navigation > div {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ef8307;
+  border-radius: 2.5rem;
+  margin: 0.5rem;
+}
+
+.pp-mountain-explorer__navigation > div span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.pp-mountain-explorer__navigation > div span:after {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.25rem;
+  color: #030303;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 1025px) {
+  .pp-mountain-explorer__navigation > div:hover {
+    background: #030303;
+  }
+  .pp-mountain-explorer__navigation > div:hover span:after {
+    color: #ef8307;
+  }
+}
+
+.pp-mountain-explorer__navigation__prev span:after {
+  content: "<";
+}
+
+.pp-mountain-explorer__navigation__next span:after {
+  content: ">";
+}
+
+.pp-mountain-explorer__inner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.pp-mountain-explorer__scale {
+  position: relative;
+  height: 25%;
+  float: right;
+  width: 35%;
+  background-size: auto 103%;
+  background-position: right top;
+  background-repeat: no-repeat;
+  z-index: 200;
+}
+
+@media (min-width: 1025px) {
+  .pp-mountain-explorer__scale {
+    width: 15%;
+  }
+}
+
+.pp-mountain-explorer__scale > div {
+  position: absolute;
+  right: 1rem;
+  bottom: 0;
+  -webkit-transition: bottom 1s ease;
+  transition: bottom 1s ease;
+}
+
+.pp-mountain-explorer__scale > div > span {
+  position: relative;
+  display: block;
+  height: 15px;
+  line-height: 15px;
+}
+
+.pp-mountain-explorer__scale > div > span:after {
+  margin-left: 1rem;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #ef8307;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.pp-mountain-explorer__thumbnails {
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.pp-mountain-explorer__thumbnails .phase-1,
+.pp-mountain-explorer__thumbnails .phase-2,
+.pp-mountain-explorer__thumbnails .phase-3 {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.pp-mountain-explorer__thumbnails .phase-1.started .pp-mountain-explorer__thumbnails__thumbnail,
+.pp-mountain-explorer__thumbnails .phase-2.started .pp-mountain-explorer__thumbnails__thumbnail,
+.pp-mountain-explorer__thumbnails .phase-3.started .pp-mountain-explorer__thumbnails__thumbnail {
+  border-top: 3px solid #ef8307;
+}
+
+.pp-mountain-explorer__thumbnails .phase-1.ended .pp-mountain-explorer__thumbnails__thumbnail,
+.pp-mountain-explorer__thumbnails .phase-2.ended .pp-mountain-explorer__thumbnails__thumbnail,
+.pp-mountain-explorer__thumbnails .phase-3.ended .pp-mountain-explorer__thumbnails__thumbnail {
+  border-top: 3px solid #07ef0e;
+}
+
+.pp-mountain-explorer__thumbnails .phase-1 {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .pp-mountain-explorer__thumbnails .phase-1 {
+    width: calc((6 / 14) * 100%);
+  }
+}
+
+.pp-mountain-explorer__thumbnails .phase-1 .pp-mountain-explorer__thumbnails__thumbnail {
+  width: calc(100% / 6);
+}
+
+.pp-mountain-explorer__thumbnails .phase-2 {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .pp-mountain-explorer__thumbnails .phase-2 {
+    width: calc((5 / 14) * 100%);
+  }
+}
+
+.pp-mountain-explorer__thumbnails .phase-2 .pp-mountain-explorer__thumbnails__thumbnail {
+  width: calc(100% / 5);
+}
+
+.pp-mountain-explorer__thumbnails .phase-3 {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .pp-mountain-explorer__thumbnails .phase-3 {
+    width: calc((3 / 14) * 100%);
+  }
+}
+
+.pp-mountain-explorer__thumbnails .phase-3 .pp-mountain-explorer__thumbnails__thumbnail {
+  width: calc(100% / 3);
+}
+
+.pp-mountain-explorer__thumbnails__thumbnail {
+  width: calc(100% / 14);
+  margin: 1rem 0;
+  display: block;
+  position: relative;
+  background-size: 80% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  word-break: break-all;
+  line-height: 0rem;
+  border-top: 3px solid #dadada;
+}
+
+.pp-mountain-explorer__thumbnails__thumbnail.completed {
+  border-top: 3px solid #07ef0e;
+}
+
+.pp-mountain-explorer__thumbnails__thumbnail:not(.active) {
+  cursor: pointer;
+}
+
+.pp-mountain-explorer__thumbnails__thumbnail:not(.active):hover {
+  border-top: 3px solid #dadada !important;
+}
+
+.pp-mountain-explorer__thumbnails__thumbnail:not(.active):hover span {
+  font-size: 1.1rem;
+}
+
+.pp-mountain-explorer__thumbnails__thumbnail.active {
+  font-weight: 900;
+}
+
+.pp-mountain-explorer__thumbnails__thumbnail.active span {
+  font-size: 1.1rem;
+}
+
+.pp-mountain-explorer__thumbnails__thumbnail.active:hover {
+  border-top: 3px solid #ef8307;
+}
+
+.pp-mountain-explorer__thumbnails__thumbnail__inner {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  left: 0;
+  text-align: center;
+}
+
+.pp-mountain-explorer__thumbnails__thumbnail__name {
+  font-size: 0.8rem;
+}
+
+.pp-mountain-explorer__thumbnails__thumbnail:after {
+  content: "";
+  padding-top: 56.25%;
+  display: block;
+  width: 100%;
+}
+
+.pp-mountain-explorer__phases {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1400%;
+  height: 100% !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pp-mountain-explorer__phases__phase {
+  position: relative;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pp-mountain-explorer__mountain {
+  width: calc(100% / 14);
+  height: 100%;
+  background-position-x: right;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.pp-mountain-explorer__mountain:not(.active) {
+  opacity: 0;
+}
+
+.pp-mountain-explorer__mountain__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pp-mountain-explorer__mountain__inner span {
+  max-width: 50vw;
+}
+
+.pp-mountain-explorer__mountain__name {
+  font-size: 2rem;
+}
+
+.pp-mountain-explorer__mountain__country {
+  font-size: 1.5rem;
+}
+
+.pp-mountain-explorer__mountain__height {
+  font-size: 1rem;
+}
+
+.pp-mountain-explorer__mountain span {
+  display: block;
 }
 
 /*!
