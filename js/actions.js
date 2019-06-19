@@ -141,8 +141,6 @@
     var perc = Number(100 - ((h - 8000) / 1000) * 100);
     var myID = "#" + activeMountain.attr("id");
 
-    console.log(myID);
-
     //$(myID).css("background-position-y", perc + "%");
   }
 
