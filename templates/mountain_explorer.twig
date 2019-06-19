@@ -28,7 +28,7 @@
                             <article class="pp-mountain-explorer__mountain{% if mountain.summit_date %} completed{% endif %}" data-mountain-height="{{ mountain.height}}" style="background-image:url('{{ theme.link }}/img/{{ mountain.outline}}');" id="pp-mountains__{{randomId}}__mountain-{{mountainIDT}}">
                                 <div class="pp-mountain-explorer__mountain__inner pp-monospace pp-orange">
                                     <span class="pp-mountain-explorer__mountain__name">
-                                        {{ mountain.name }}
+                                        {{mountainIDT}}. {{ mountain.name }}
                                     </span>
                                     <span class="pp-mountain-explorer__mountain__country" data-height="{{ mountain.country}}">
                                         Phase
