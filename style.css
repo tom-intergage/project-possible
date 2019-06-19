@@ -276,6 +276,11 @@ p {
   padding: 0.5rem 1rem;
 }
 
+.pp-home-banner__article .pp-support-cta.orange a {
+  background: #ef8307;
+  color: #030303;
+}
+
 .pp-home-banner__article h1,
 .pp-home-banner__article h2,
 .pp-home-banner__article p {
