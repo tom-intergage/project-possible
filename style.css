@@ -1020,13 +1020,15 @@ iframe.snapwidget-widget {
 
 @media (min-width: 500px) {
   .pp-achievements__article:before {
-    background-size: 50% auto;
+    padding-top: 50%;
+    width: 50%;
   }
 }
 
 @media (min-width: 768px) {
   .pp-achievements__article:before {
-    background-size: 100% auto;
+    padding-top: 80%;
+    width: 80%;
   }
 }
 
