@@ -180,7 +180,11 @@ p {
   overflow: hidden;
 }
 
-.pp-banner.pp-black-bg > *:first-child {
+.pp-banner.pp-home-banner {
+  background: #030303;
+}
+
+.pp-banner.pp-home-banner > *:first-child {
   max-width: 1500px;
   margin: 0px auto;
 }
