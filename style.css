@@ -111,10 +111,6 @@ p {
   color: #dadada;
 }
 
-.pp-black-bg.pp-banner {
-  background: #030303 !important;
-}
-
 .pp-grey-bg {
   background: #dadada;
   color: #030303;
@@ -184,7 +180,7 @@ p {
   overflow: hidden;
 }
 
-.pp-banner.pp-black-bg > * {
+.pp-banner.pp-black-bg > *:first-child {
   max-width: 1500px;
   margin: 0px auto;
 }
