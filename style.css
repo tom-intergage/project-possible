@@ -176,9 +176,13 @@ p {
 
 .pp-banner {
   width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.pp-banner > * {
   max-width: 1500px;
   margin: 0px auto;
-  overflow: hidden;
 }
 
 .pp-banner__section-title {
