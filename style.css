@@ -184,11 +184,6 @@ p {
   background: #030303;
 }
 
-.pp-banner.pp-home-banner > *:first-child {
-  max-width: 1500px;
-  margin: 0px auto;
-}
-
 .pp-banner__section-title {
   position: absolute;
   top: 50%;
