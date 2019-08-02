@@ -147,7 +147,7 @@
   function moveSlider(slider, activeMountainHeight) {
     var perc = ((activeMountainHeight - 8000) / 1000) * 100;
     slider
-      .find(".pp-mountain-explorer__scale > div")
+      .find(".pp-mountain-explorer__scale > div > div")
       .css({ bottom: perc + "%" })
       .html(function() {
         return "<span>" + activeMountainHeight + "m</span>";

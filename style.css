@@ -1075,6 +1075,11 @@ ul.slick-dots li.slick-active button:before {
           align-items: flex-start;
 }
 
+.thumbnails-container {
+  width: 100%;
+  height: auto;
+}
+
 .pp-mountain-explorer {
   position: relative;
   overflow: hidden;
@@ -1095,19 +1100,20 @@ ul.slick-dots li.slick-active button:before {
   }
 }
 
-.pp-mountain-explorer + div {
-  width: 100%;
-  height: auto;
-}
-
 .pp-mountain-explorer__navigation {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 120%;
+  left: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   z-index: 300;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .pp-mountain-explorer__navigation > div {
@@ -1126,6 +1132,10 @@ ul.slick-dots li.slick-active button:before {
   background: #ef8307;
   border-radius: 2.5rem;
   margin: 0.5rem;
+}
+
+.pp-mountain-explorer__navigation > div:not(:hover) {
+  opacity: 0.5;
 }
 
 .pp-mountain-explorer__navigation > div span {
@@ -1171,9 +1181,10 @@ ul.slick-dots li.slick-active button:before {
 }
 
 .pp-mountain-explorer__scale {
-  position: relative;
   height: 25%;
-  float: right;
+  top: 0;
+  left: 0;
+  position: absolute;
   width: 35%;
   background-size: auto 103%;
   background-position: right top;
@@ -1188,6 +1199,12 @@ ul.slick-dots li.slick-active button:before {
 }
 
 .pp-mountain-explorer__scale > div {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.pp-mountain-explorer__scale > div > div {
   position: absolute;
   right: 1rem;
   bottom: 0;
@@ -1195,14 +1212,14 @@ ul.slick-dots li.slick-active button:before {
   transition: bottom 1s ease;
 }
 
-.pp-mountain-explorer__scale > div > span {
+.pp-mountain-explorer__scale > div > div > span {
   position: relative;
   display: block;
   height: 15px;
   line-height: 15px;
 }
 
-.pp-mountain-explorer__scale > div > span:after {
+.pp-mountain-explorer__scale > div > div > span:after {
   margin-left: 1rem;
   content: "";
   width: 0;
@@ -1389,11 +1406,12 @@ ul.slick-dots li.slick-active button:before {
 .pp-mountain-explorer__mountain__inner {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
 }
 
 .pp-mountain-explorer__mountain__inner span {
   max-width: 50vw;
+  text-align: right;
 }
 
 .pp-mountain-explorer__mountain__name {
@@ -1410,6 +1428,40 @@ ul.slick-dots li.slick-active button:before {
 
 .pp-mountain-explorer__mountain span {
   display: block;
+}
+
+.pp-mountain-grid {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.pp-mountain-grid img {
+  height: 5rem;
+  width: auto;
+  display: block;
+  margin: 0px auto 2rem auto;
+}
+
+.pp-mountain-grid .pp-text-columns__article {
+  margin-top: 3rem;
+}
+
+.pp-mountain-grid article {
+  position: relative;
+}
+
+.pp-mountain-grid .pp-orange-text {
+  padding: 0.5rem;
+  color: #4bef07;
+  border: 2px solid #4bef07;
+  margin: 2rem auto 1rem auto;
+  position: absolute;
+  font-weight: 900;
+  top: -2rem;
+  width: 150px;
+  left: 50%;
+  -webkit-transform: translateX(-50%) rotate(-5deg);
+          transform: translateX(-50%) rotate(-5deg);
 }
 
 /*!
