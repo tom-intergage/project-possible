@@ -1472,6 +1472,10 @@ ul.slick-dots li.slick-active button:before {
           transform: translateX(-50%) rotate(-5deg);
 }
 
+.pp-artcle-summary__summary a.read-more {
+  display: none;
+}
+
 /*!
  * jQuery mmenu v7.3.3
  * @requires jQuery 1.7.0 or later
