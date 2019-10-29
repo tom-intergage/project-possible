@@ -435,6 +435,12 @@ iframe.snapwidget-widget {
   min-height: 600px;
 }
 
+@media screen and (min-width: 1200px) {
+  .pp-article-banner {
+    min-height: 80vh;
+  }
+}
+
 .pp-article-banner__image {
   background-size: cover;
   background-position: center center;
@@ -445,6 +451,12 @@ iframe.snapwidget-widget {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .pp-article-banner__image {
+    min-height: 80vh;
+  }
 }
 
 .pp-article {
