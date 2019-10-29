@@ -132,6 +132,7 @@ p {
 
 .pp-half-height {
   min-height: 50vh;
+  min-height: 600px;
 }
 
 .pp-center-xy {
