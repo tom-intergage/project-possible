@@ -229,7 +229,7 @@ p {
 
 .pp-home-banner__article {
   text-align: left;
-  padding: 0rem 1em 0 0;
+  padding: 0rem 0 0 1em;
   color: #fff;
   z-index: 5;
   position: absolute;
@@ -243,7 +243,7 @@ p {
 
 @media screen and (min-width: 1024px) {
   .pp-home-banner__article {
-    padding: 0rem 4rem 0 0;
+    padding: 0rem 0 0 4rem;
   }
 }
 
@@ -260,7 +260,7 @@ p {
 }
 
 .pp-home-banner__article h1 {
-  text-align: right;
+  text-align: left;
 }
 
 .pp-home-banner__article h1:after {
