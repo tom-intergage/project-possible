@@ -265,7 +265,7 @@ p {
 
 .pp-home-banner__article h1:after {
   display: block;
-  margin: 1rem 0 1rem 50%;
+  margin: 1rem 50% 1rem 0%;
   content: "";
   width: 50%;
   height: 3px;
